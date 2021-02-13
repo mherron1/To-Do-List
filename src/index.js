@@ -1,4 +1,7 @@
-import { createTask, taskList } from "./createTask";
+import { createTask, taskList, folder } from "./createTask";
+import { displayList } from "./displayList";
+import { closeForm, submitTask } from "./form";
+import { createFolder, displayFolders } from "./createFolder";
 
 //form Popup
 let addItemButton = document.querySelector("#addItemButton");
@@ -8,30 +11,17 @@ addItemButton.addEventListener("click", () => {
 
 //close popup
 let formClose = document.querySelector("#formX");
-formClose.addEventListener("click", () => {
-  console.log("closing");
-  document.querySelector("#mainForm").style.display = "none";
-});
+formClose.addEventListener("click", closeForm);
 
 //addNewItem new Item
 
 let doneButton = document.querySelector("#doneButton");
-doneButton.addEventListener("click", createTask);
+doneButton.addEventListener("click", submitTask);
 
-let listArea = document.querySelector("#listArea");
+//add new project button
 
-const displayList = function () {
-  let listArea = document.querySelector("#listArea");
-  removeAllChildNodes(listArea);
-  taskList.forEach(function (item) {
-    let task = document.createElement("div");
-    task.textContent = item.taskName;
-    listArea.appendChild(task);
-  });
-};
+let newProject = document.querySelector("#newProject");
+newProject.addEventListener("click", createFolder);
 
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
+displayList();
+displayFolders();

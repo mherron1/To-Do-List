@@ -1,33 +1,25 @@
+import { selectedFolder } from "./createFolder";
+
 let taskList = [];
 
 class Todo {
-  constructor(task) {
+  constructor(task, dueDate, priority, folder) {
     this.task = task;
+    this.dueDate = dueDate;
+    this.priority = priority;
+    this.folder = folder;
   }
 }
 
 const createTask = function () {
-  let taskName = document.querySelector("#taskName").value;
-  let task1 = new Todo(taskName);
-  taskList.push(task1);
-  removeAllChildNodes(listArea);
-
-  taskList.forEach(displayList);
-  document.querySelector("#taskName").value = "";
-};
-
-const displayList = function (item) {
-  let listArea = document.querySelector("#listArea");
-  let newTask = document.createElement("div");
-  newTask.classList = "listItems";
-  newTask.textContent = item.task;
-  listArea.appendChild(newTask);
-};
-
-export { createTask };
-
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
+  let task = document.querySelector("#taskName").value;
+  let dueDate = document.querySelector("#dueDate").value;
+  let priority = document.querySelector("#priority").value;
+  let folder = selectedFolder;
+  if (task != "") {
+    let newTask = new Todo(task, dueDate, priority, folder);
+    taskList.push(newTask);
   }
-}
+};
+
+export { createTask, taskList };
