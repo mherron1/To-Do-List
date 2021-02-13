@@ -1,3 +1,14 @@
+html {
+  height: 100%;
+}
+
+h1 {
+  margin: 0px;
+  font-family: arial;
+  font-size: 80px;
+  text-align: center;
+}
+
 #mainForm {
   background-color: white;
   position: fixed;
@@ -14,7 +25,7 @@
 
 input {
   font-size: 20px;
-  background-color: silver;
+  background-color: #f2f2f2;
   width: 490px;
 }
 
@@ -29,14 +40,24 @@ input {
 }
 
 #addItemButton {
+  font-size: 40px;
+  width: 50px;
+  float: right;
+  border: none;
+  background-color: lightskyblue;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+#newProject {
   font-size: 20px;
 }
 
 #content {
   display: grid;
-  height: 1000px;
+  height: 100vh;
   margin-top: 25px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 250px auto 75px;
   border-top: 3px solid black;
 }
 
@@ -55,10 +76,41 @@ input {
 
 .listItems {
   font-size: 35px;
-  margin: 10px;
+  width: 100%;
+
   border: 2px solid black;
-  width: 400px;
+  border-top: none;
+  padding-left: 10px;
   height: 40px;
-  margin-right: 800px;
-  background-color: lightskyblue;
+  float: left;
+}
+
+.listRemove {
+  font-size: 35px;
+  margin: 2px;
+  border: 2px solid black;
+  width: 30px;
+  height: 32px;
+  background-color: silver;
+  float: right;
+  font-family: arial;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.folderList {
+  font-size: 30px;
+  padding: 3px;
+  background-color: silver;
+  margin-bottom: 3px;
+}
+
+.folderList:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+#projectInput {
+  width: 200px;
 }
