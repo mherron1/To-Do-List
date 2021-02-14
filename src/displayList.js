@@ -1,5 +1,6 @@
 import { taskList } from "./createTask";
 import { selectedFolder } from "./createFolder";
+import { editTask } from "./editTask";
 
 const displayList = function () {
   let listArea = document.querySelector("#listArea");
@@ -22,6 +23,7 @@ const displayList = function () {
     ) {
       let listItem = document.createElement("div");
       let removeItem = document.createElement("div");
+      let editItem = document.createElement("div");
       listItem.innerHTML = `
       <p>Task: ${taskList[i].task}</p>
       <p>Descriptio: ${taskList[i].description}</p>
@@ -29,14 +31,23 @@ const displayList = function () {
       <p>Due: ${taskList[i].dueDate}</p>
       <p>Folder: ${taskList[i].folder}</p>`;
       removeItem.textContent = "Remove";
+      editItem.textContent = "Edit";
+
       removeItem.addEventListener("click", () => {
         taskList.splice(i, 1);
         displayList();
       });
+
+      editItem.addEventListener("click", () => {
+        editTask(taskList[i]);
+      });
+
       listItem.classList = "listItems";
       removeItem.classList = "listRemove";
+      editItem.classList = "listEdit";
       listArea.appendChild(listItem);
       listItem.appendChild(removeItem);
+      listItem.appendChild(editItem);
     }
   }
 };

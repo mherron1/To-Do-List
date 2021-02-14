@@ -4,9 +4,11 @@ import { createFolder, displayFolders } from "./createFolder";
 
 //form Popup
 let addItemButton = document.querySelector("#addItemButton");
-addItemButton.addEventListener("click", () => {
+addItemButton.addEventListener("click", showForm);
+
+function showForm() {
   document.querySelector("#mainForm").style.opacity = "1";
-});
+}
 
 //close popup
 let formClose = document.querySelector("#formX");
@@ -24,3 +26,5 @@ newProject.addEventListener("click", createFolder);
 
 displayList();
 displayFolders();
+
+export { showForm };
