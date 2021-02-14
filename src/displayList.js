@@ -3,6 +3,8 @@ import { selectedFolder } from "./createFolder";
 
 const displayList = function () {
   let listArea = document.querySelector("#listArea");
+
+  //clear list
   while (listArea.firstChild) {
     listArea.removeChild(listArea.firstChild);
   }
@@ -12,6 +14,8 @@ const displayList = function () {
   folderName.classList = "folderName";
   listArea.appendChild(folderName);
   for (let i = 0; i < taskList.length; i++) {
+    //loop through list array and display if tasks matching the selected folder
+    //or all if all tasks selected
     if (
       taskList[i].folder === selectedFolder ||
       selectedFolder === "All Tasks"

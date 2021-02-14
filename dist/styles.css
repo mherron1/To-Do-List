@@ -16,22 +16,19 @@ p {
 #mainForm {
   background-color: silver;
   position: fixed;
-  display: none;
   border: 3px solid black;
-  width: 50%;
-  max-width: 500px;
   padding: 10px;
   border-radius: 10px;
-  font-size: 25px;
-  margin-left: 25%;
-  margin-top: 5%;
-  opacity: 0.97;
-  transform: scale(0.8);
+  font-size: 20px;
+  margin-left: 30%;
+  margin-top: 10%;
+  opacity: 0;
+  transition-duration: 0.3s;
 }
 
 input[type="text"],
 select {
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
   padding: 8px 8px;
   margin: 8px 0;
@@ -42,6 +39,7 @@ select {
 }
 
 input[type="date"] {
+  font-size: 20px;
   width: 100%;
   padding: 8px 8px;
   margin: 8px 0;

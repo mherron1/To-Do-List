@@ -5,7 +5,7 @@ import { createFolder, displayFolders } from "./createFolder";
 //form Popup
 let addItemButton = document.querySelector("#addItemButton");
 addItemButton.addEventListener("click", () => {
-  document.querySelector("#mainForm").style.display = "block";
+  document.querySelector("#mainForm").style.opacity = "1";
 });
 
 //close popup

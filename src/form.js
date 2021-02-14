@@ -2,7 +2,7 @@ import { createTask } from "./createTask";
 import { displayList } from "./displayList";
 
 function closeForm() {
-  document.querySelector("#mainForm").style.display = "none";
+  document.querySelector("#mainForm").style.opacity = "0.0";
 }
 
 function submitTask() {
