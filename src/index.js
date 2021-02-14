@@ -1,4 +1,3 @@
-import { createTask, taskList, folder } from "./createTask";
 import { displayList } from "./displayList";
 import { closeForm, submitTask } from "./form";
 import { createFolder, displayFolders } from "./createFolder";
