@@ -1,100 +1,145 @@
 html {
   height: 100%;
+  font-family: arial;
 }
 
 h1 {
   margin: 0px;
-  font-family: arial;
-  font-size: 80px;
+  font-size: 58px;
   text-align: center;
 }
 
+p {
+  margin: 0;
+}
+
 #mainForm {
-  background-color: white;
+  background-color: silver;
   position: fixed;
   display: none;
-  margin-top: 300px;
   border: 3px solid black;
-  width: 500px;
+  width: 50%;
+  max-width: 500px;
   padding: 10px;
   border-radius: 10px;
   font-size: 25px;
-  margin-left: 35%;
+  margin-left: 25%;
+  margin-top: 5%;
   opacity: 0.97;
+  transform: scale(0.8);
 }
 
-input {
+input[type="text"],
+select {
+  font-size: 18px;
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 8px 0;
   font-size: 20px;
-  background-color: #f2f2f2;
-  width: 490px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 #formX {
-  border: 1px solid black;
-  margin-top: 15px;
-  padding-left: 4px;
-  padding-right: 4px;
-  background-color: lightskyblue;
+  float: right;
+  background-color: white;
+  width: 25px;
   cursor: pointer;
-  width: 20px;
+  border: 2px solid black;
+  padding: 2px;
+
+  text-align: center;
 }
 
 #addItemButton {
-  font-size: 40px;
-  width: 50px;
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 100px;
+  width: 125px;
   border: none;
   background-color: lightskyblue;
   cursor: pointer;
   margin-top: 1px;
+  border: 3px solid black;
+}
+
+#addItemButton:hover {
+  filter: brightness(0.95);
+}
+
+select {
+  font-size: 20px;
 }
 
 #newProject {
-  font-size: 20px;
+  font-size: 18px;
+  height: 39px;
+  width: 140px;
+  line-height: 10px;
+  transform: translateY(0);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 #content {
   display: grid;
+  width: 100%;
   height: 100vh;
   margin-top: 25px;
-  grid-template-columns: 250px auto 75px;
+  grid-template-columns: 200px auto;
   border-top: 3px solid black;
 }
 
 #sideBar {
   border-right: 3px solid black;
 
-  width: 250px;
+  width: 200px;
 }
 
 #doneButton {
-  font-size: 18px;
+  font-size: 22px;
   float: right;
   margin-top: 15px;
   cursor: pointer;
-}
-
-.listItems {
-  font-size: 35px;
-  width: 100%;
-
   border: 2px solid black;
-  border-top: none;
-  padding-left: 10px;
-  height: 40px;
-  float: left;
+  padding: 5px;
+  background-color: white;
 }
 
 .listRemove {
-  font-size: 35px;
+  font-size: 18px;
   margin: 2px;
+  margin-bottom: 7px;
+  vertical-align: auto;
   border: 2px solid black;
-  width: 30px;
-  height: 32px;
-  background-color: silver;
-  float: right;
-  font-family: arial;
-  font-size: 30px;
+  width: 90px;
+  line-height: 20px;
+  background-color: rgb(211, 208, 208);
   text-align: center;
   cursor: pointer;
 }
@@ -107,10 +152,47 @@ input {
 }
 
 .folderList:hover {
-  background-color: lightgreen;
+  background-color: lightskyblue;
   cursor: pointer;
 }
 
 #projectInput {
   width: 200px;
+}
+
+.folderName {
+  font-size: 30px;
+  text-align: center;
+
+  background-color: lightskyblue;
+  border-left: 3px solid black;
+  padding: 3px;
+  height: 34px;
+}
+
+.listItems {
+  line-height: 25px;
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  border-left: 3px solid black;
+  padding-left: 10px;
+  background-color: rgb(182, 227, 255);
+}
+
+.folderRemoveButton {
+  font-size: 25px;
+  margin: 2px;
+  border: 1px solid grey;
+  color: rgb(100, 100, 100);
+  width: 25px;
+  height: 25px;
+  background-color: lightgrey;
+  float: right;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.folderRemoveButton:hover {
+  background-color: skyblue;
 }
