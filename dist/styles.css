@@ -18,12 +18,13 @@ p {
   position: fixed;
   border: 3px solid black;
   padding: 10px;
+  max-width: 500px;
   border-radius: 10px;
   font-size: 20px;
   margin-left: 30%;
   margin-top: 10%;
   opacity: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 
 input[type="text"],
@@ -117,6 +118,16 @@ select {
   border-right: 3px solid black;
 
   width: 200px;
+}
+
+.saveButton {
+  font-size: 22px;
+  float: right;
+  margin-top: 15px;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: white;
 }
 
 #doneButton {
