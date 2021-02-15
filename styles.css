@@ -74,10 +74,6 @@ select {
   }
 }
 
-#projectInput {
-  width: 100px;
-}
-
 input[type="datetime-local"] {
   font-size: 20px;
   width: 100%;
@@ -341,12 +337,7 @@ select {
 
 @media only screen and (max-width: 500px) {
   .listItems {
-    line-height: 17px;
-    font-size: 15px;
-    border-bottom: 2px solid black;
-    border-left: 3px solid black;
-    padding-left: 10px;
-    background-color: hsl(203, 100%, 82%);
+    padding-bottom: 5px;
   }
 }
 
