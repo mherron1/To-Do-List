@@ -22,7 +22,7 @@ const displayList = function () {
       selectedFolder === "All Tasks"
     ) {
       let listItem = document.createElement("div");
-      let removeItem = document.createElement("div");
+      let removeItem = document.createElement("i");
       let editItem = document.createElement("div");
       listItem.innerHTML = `
       <p>Task: ${taskList[i].task}</p>
@@ -30,8 +30,6 @@ const displayList = function () {
       <p>Priority: ${taskList[i].priority}</p>
       <p>Due: ${taskList[i].dueDate}</p>
       <p>Folder: ${taskList[i].folder}</p>`;
-      removeItem.textContent = "Remove";
-      editItem.textContent = "Edit";
 
       removeItem.addEventListener("click", () => {
         taskList.splice(i, 1);
@@ -43,11 +41,14 @@ const displayList = function () {
       });
 
       listItem.classList = "listItems";
-      removeItem.classList = "listRemove";
-      editItem.classList = "listEdit";
-      listArea.appendChild(listItem);
+      removeItem.classList = "fa fa-trash";
+      editItem.classList = "fa fa-edit";
       listItem.appendChild(removeItem);
       listItem.appendChild(editItem);
+      listArea.appendChild(listItem);
+      if (i % 2 === 0) {
+        listItem.style.backgroundColor = "rgb(182, 222, 247)";
+      }
     }
   }
 };
