@@ -14,7 +14,7 @@ p {
 }
 
 #mainForm {
-  background-color: silver;
+  background-color: rgb(212, 212, 212);
   position: fixed;
   border: 3px solid black;
   padding: 10px;
@@ -22,9 +22,10 @@ p {
   border-radius: 10px;
   font-size: 20px;
   margin-left: 30%;
-  margin-top: 10%;
+  margin-top: 20%;
   opacity: 0;
-  transition-duration: 0.2s;
+  transform: translateY(0px);
+  transition-duration: 0.1s;
 }
 
 input[type="text"],
@@ -114,6 +115,17 @@ select {
   border-top: 3px solid black;
 }
 
+.fa-trash {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-edit {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 #sideBar {
   border-right: 3px solid black;
 
@@ -169,13 +181,13 @@ select {
 .folderList {
   font-size: 30px;
   padding: 3px;
-  background-color: silver;
+  background-color: lightgrey;
   margin-bottom: 3px;
 }
 
 .folderList:hover {
-  background-color: lightskyblue;
   cursor: pointer;
+  background-color: silver;
 }
 
 #projectInput {
@@ -186,7 +198,7 @@ select {
   font-size: 30px;
   text-align: center;
 
-  background-color: lightskyblue;
+  background-color: rgb(212, 212, 212);
   border-left: 3px solid black;
   padding: 3px;
   height: 34px;
@@ -198,23 +210,24 @@ select {
   border-bottom: 2px solid black;
   border-left: 3px solid black;
   padding-left: 10px;
-  background-color: rgb(182, 227, 255);
+  background-color: lightskyblue;
 }
 
 .folderRemoveButton {
   font-size: 25px;
   margin: 2px;
-  border: 1px solid grey;
-  color: rgb(100, 100, 100);
+
+  color: grey;
   width: 25px;
   height: 25px;
-  background-color: lightgrey;
+
   float: right;
   font-size: 20px;
   text-align: center;
-  border-radius: 50%;
+
   cursor: pointer;
 }
 .folderRemoveButton:hover {
-  background-color: skyblue;
+  color: black;
+  font-weight: bold;
 }
