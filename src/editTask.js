@@ -25,6 +25,11 @@ const editTask = function (t) {
       closeForm();
       document.querySelector("#doneButton").style.display = "block";
       document.querySelector(".saveButton").remove();
+
+      document.querySelector("#taskName").value = "";
+      document.querySelector("#dueDate").value = "";
+      document.querySelector("#priority").value = "";
+      document.querySelector("#taskDescription").value = "";
     });
   }
 
