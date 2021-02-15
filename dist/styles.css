@@ -18,11 +18,11 @@ p {
   position: fixed;
   border: 3px solid black;
   padding: 10px;
-  max-width: 500px;
+  max-width: 750px;
   border-radius: 10px;
   font-size: 20px;
   margin-left: 30%;
-  margin-top: 20%;
+  margin-top: 10%;
   opacity: 0;
   transform: translateY(0px);
   transition-duration: 0.1s;
