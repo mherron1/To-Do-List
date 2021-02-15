@@ -1,6 +1,7 @@
 import { selectedFolder } from "./createFolder";
 
-let taskList = [];
+let taskList = localStorage.getItem("taskList");
+taskList = taskList ? JSON.parse(taskList) : [];
 
 class Todo {
   constructor(task, description, dueDate, priority, folder) {
@@ -21,6 +22,8 @@ const createTask = function () {
   if (task != "") {
     let newTask = new Todo(task, description, dueDate, priority, folder);
     taskList.push(newTask);
+    console.log(taskList);
+    localStorage.setItem("taskList", JSON.stringify(taskList));
   }
   //reset input field
   document.querySelector("#taskName").value = "";

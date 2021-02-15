@@ -33,6 +33,7 @@ const displayList = function () {
 
       removeItem.addEventListener("click", () => {
         taskList.splice(i, 1);
+        localStorage.setItem("taskList", JSON.stringify(taskList));
         displayList();
       });
 

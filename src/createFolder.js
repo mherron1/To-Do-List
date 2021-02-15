@@ -1,6 +1,7 @@
 import { displayList } from "./displayList";
 
-let folderList = ["All Tasks"];
+let folderList = localStorage.getItem("folderList");
+folderList = folderList ? JSON.parse(folderList) : ["All Tasks"];
 let selectedFolder = "All Tasks";
 
 const createFolder = function () {
@@ -8,6 +9,7 @@ const createFolder = function () {
   //check for input then add to folderList and render
   if (name != "") {
     folderList.push(name);
+    localStorage.setItem("folderList", JSON.stringify(folderList));
     displayFolders();
   }
   //reset input field
@@ -28,6 +30,7 @@ const displayFolders = function () {
     removeItem.classList = "folderRemoveButton";
     removeItem.addEventListener("click", () => {
       folderList.splice(i, 1);
+      localStorage.setItem("folderList", JSON.stringify(folderList));
       displayFolders();
     });
 
