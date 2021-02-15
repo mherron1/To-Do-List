@@ -40,9 +40,10 @@ p {
 
 @media only screen and (max-width: 500px) {
   #mainForm {
+    position: absolute;
+    bottom: 0;
     margin-left: 10px;
-    margin-right: 10px;
-    max-width: 80%;
+    max-width: 86%;
     font-size: 12px;
     margin-top: 30%;
   }
@@ -63,7 +64,7 @@ select {
 @media only screen and (max-width: 500px) {
   input[type="text"],
   select {
-    font-size: 12px;
+    font-size: 14px;
     width: 100%;
     padding: 4px 4px;
     margin: 4px 0;
@@ -87,7 +88,7 @@ input[type="datetime-local"] {
 
 @media only screen and (max-width: 500px) {
   input[type="datetime-local"] {
-    font-size: 20px;
+    font-size: 14px;
     width: 100%;
     padding: 8px 8px;
     margin: 8px 0;
@@ -107,6 +108,19 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 500px) {
+  textarea {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 }
 
 #formX {
@@ -277,6 +291,21 @@ select {
   background-color: rgb(211, 208, 208);
   text-align: center;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .listEdit {
+    font-size: 18px;
+    margin: 2px;
+    margin-bottom: 7px;
+    vertical-align: auto;
+    border: 2px solid black;
+    width: 90px;
+    line-height: 20px;
+    background-color: rgb(211, 208, 208);
+    text-align: center;
+    cursor: pointer;
+  }
 }
 
 .folderList {
