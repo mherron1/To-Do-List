@@ -119,11 +119,14 @@ select {
   float: right;
   margin-right: 10px;
   cursor: pointer;
+
+  transform: scale(1.3);
 }
 
 .fa-edit {
   margin-right: 10px;
   cursor: pointer;
+  transform: scale(1.3);
 }
 
 #sideBar {
@@ -210,7 +213,7 @@ select {
   border-bottom: 2px solid black;
   border-left: 3px solid black;
   padding-left: 10px;
-  background-color: lightskyblue;
+  background-color: hsl(203, 100%, 82%);
 }
 
 .folderRemoveButton {
