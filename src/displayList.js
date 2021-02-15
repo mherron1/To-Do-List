@@ -26,9 +26,9 @@ const displayList = function () {
       let editItem = document.createElement("div");
       listItem.innerHTML = `
       <p>Task: ${taskList[i].task}</p>
-      <p>Description: ${taskList[i].description}</p>
+      <p>Notes: ${taskList[i].description}</p>
       <p>Priority: ${taskList[i].priority}</p>
-      <p>Due: ${taskList[i].dueDate}</p>
+      <p>Deadline: ${taskList[i].dueDate}</p>
       <p>Folder: ${taskList[i].folder}</p>`;
 
       removeItem.addEventListener("click", () => {

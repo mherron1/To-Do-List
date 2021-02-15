@@ -26,6 +26,7 @@ p {
   opacity: 0;
   transform: translateY(0px);
   transition-duration: 0.1s;
+  z-index: 1000;
 }
 
 input[type="text"],
