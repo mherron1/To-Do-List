@@ -7,9 +7,14 @@ function closeForm() {
 }
 
 function submitTask() {
-  createTask();
-  displayList();
-  closeForm();
+  let task = document.querySelector("#taskName").value;
+
+  if (task != "") {
+    createTask();
+    displayList();
+    closeForm();
+  }
+  
 }
 
 export { closeForm, submitTask };

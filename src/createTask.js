@@ -19,17 +19,12 @@ const createTask = function () {
   let priority = document.querySelector("#priority").value;
   let description = document.querySelector("#taskDescription").value;
   let folder = selectedFolder;
-  if (task != "") {
-    let newTask = new Todo(task, description, dueDate, priority, folder);
-    taskList.push(newTask);
-    console.log(taskList);
-    localStorage.setItem("taskList", JSON.stringify(taskList));
-  }
-  //reset input field
-  document.querySelector("#taskName").value = "";
-  document.querySelector("#dueDate").value = "";
-  document.querySelector("#priority").value = "";
-  document.querySelector("#taskDescription").value = "";
+  
+  let newTask = new Todo(task, description, dueDate, priority, folder);
+  taskList.push(newTask);
+  console.log(taskList);
+  localStorage.setItem("taskList", JSON.stringify(taskList));
+
 };
 
 export { createTask, taskList };
